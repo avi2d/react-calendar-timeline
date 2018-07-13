@@ -81,6 +81,7 @@
     "react": "^0.14.8 || >=15"
   },
   "devDependencies": {
+    "classnames": "2.2.5",
     "babel-cli": "^6.7.5",
     "babel-core": "~6.18.2",
     "babel-eslint": "^7.1.1",

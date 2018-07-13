@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import moment from 'moment'
@@ -34,6 +35,7 @@ import {
 
 export default class ReactCalendarTimeline extends Component {
   static propTypes = {
+    className: PropTypes.string,
     groups: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
     items: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
     sidebarWidth: PropTypes.number,
@@ -1189,6 +1191,7 @@ export default class ReactCalendarTimeline extends Component {
 
   render() {
     const {
+      className,
       items,
       groups,
       headerLabelGroupHeight,
@@ -1247,7 +1250,7 @@ export default class ReactCalendarTimeline extends Component {
       <div
         style={this.props.style}
         ref={el => (this.container = el)}
-        className="react-calendar-timeline"
+        className={classNames("react-calendar-timeline", className)}
       >
         {this.header(
           canvasTimeStart,
